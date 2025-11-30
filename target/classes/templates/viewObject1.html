@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+
+.a{
+	float:right;
+	font-family:Roboto;
+	font-size:120%;
+	margin-right:24px;
+	margin-top:12px;
+	text-decoration:none;
+	color:#2E151B;
+	font-weight: bold;
+}
+.span{
+	float:left;
+	font-family:Verdana;
+ 	font-size:150%;
+	margin-left:10px;
+	margin-top:8px;
+	color:#2E151B;
+	font-weight: bold;
+
+}
+
+.middle{
+	border-radius: 10px;
+	margin-top:5px;
+	height:130px;
+	width:100%;
+	background: linear-gradient(70deg, #FD6585 30%, rgba(0,0,0,0) 30%), linear-gradient(30deg, #4C83FF 60%, #32CCBC 60%);
+	}
+.button {
+ 	background: linear-gradient(#667eea , #764ba2);
+  	border: none;
+  	color: white;
+	float:right;
+	margin-right:35px;
+  	padding: 16px 50px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	cursor: pointer;
+	border-radius: 5px;
+}
+.button:hover {
+        background: linear-gradient(#09203f , #537895);
+  	border: none;
+  	color: white;
+	float:right;
+	margin-right:35px;
+  	padding: 16px 50px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	cursor: pointer;
+	border-radius: 5px;
+}
+
+
+.mainbutton1{
+    font-family:Verdana;
+	background: linear-gradient(#434343, #000000);
+  	border: none;
+  	color: white;
+  	padding: 16px 80px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	cursor: pointer;
+	margin-bottom:100px;
+	border-radius: 8px 20px;
+	position: absolute;
+
+
+}
+
+.mainbutton1:hover{
+    font-family:Verdana;
+	background: linear-gradient(#868f96, #596164);
+  	border: none;
+  	color: white;
+  	padding: 16px 80px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	cursor:pointer;
+	margin-bottom:100px;
+	border-radius: 8px 20px;
+	position: absolute;
+
+}
+.bottom {
+  height: 490px;
+  position: relative;
+}
+
+
+.last {
+    position:relative;
+	border-radius: 10px;
+	margin-top:4px;
+  	height: 50px;
+	background:linear-gradient(#72EDF2,#5151E5);
+
+}
+
+.mainbutton{
+    font-family:Verdana;
+	background: linear-gradient(#434343, #000000);
+  	border: none;
+  	color: white;
+  	padding: 16px 45px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	cursor: pointer;
+	margin:0 auto;
+	border-radius: 8px;
+}
+
+.mainbutton:hover{
+    font-family:Verdana;
+	background: linear-gradient(#868f96, #596164);
+  	border: none;
+  	color: white;
+  	padding: 16px 45px;
+  	text-align: center;
+  	text-decoration: none;
+  	display: inline-block;
+  	font-size: 16px;
+  	cursor: pointer;
+	margin:0 auto;
+	border-radius: 8px;
+}
+table {
+    float:left;
+    border-collapse:collapse;
+    border-radius: 8px;
+    margin-left: 20px;
+    padding:30px 20px;
+    width: 60vw;
+}
+
+th, td {
+  text-align: center;
+  padding: 18px;
+  font-size: 16px;
+  font-family:Verdana;
+}
+
+tr:nth-child(even){background:linear-gradient(#f5f7fa , #c3cfe2);}
+tr:nth-child(odd){background:linear-gradient(#a3bded ,#6991c7);}
+
+th {
+  background: linear-gradient(#29323c ,#485563);
+  color: white;
+  font-size: 18px;
+}
+
+#goBack{
+    margin-left:600px;
+}
+#goBack2{
+    margin-left:180px;
+}
+   </style>
+    <meta charset="UTF-8"/>
+    <title>viewObject</title>
+</head>
+<body>
+<span class="span">SPRING BOOT</span>
+<a class="a" href="">Sign In</a>
+<input type="button" class="button" value="Get Started">
+<div class="top">
+    <a th:href="@{home}" style="float:left; margin-left:80px; margin-top:12px; font-size:120%; text-decoration:none; color:#2E151B;">Home</a>
+    <a th:href="@{why}" style="float:left; margin-left:50px; margin-top:12px; font-size:120%; text-decoration:none; color:#2E151B;">Why this App</a>
+    <a th:href="@{aboutUs}" style="float:left; margin-left:50px; margin-top:12px; font-size:120%; text-decoration:none; color:#2E151B;">About us</a>
+    <a th:href="@{contact}" style="float:left; margin-left:50px; margin-top:12px; font-size:120%; text-decoration:none; color:#2E151B;">Contact us</a>
+
+
+</div>
+<br><br><br>
+
+<div class="middle">
+
+</div>
+<div class="bottom">
+    <br><br><br>
+    <table>
+        <tr>
+            <th>Parameters</th>
+            <th>Values</th>
+        </tr>
+        <tr>
+            <td>Name of the Object is : </td><td th:text="${item.objectName}"></td>
+        </tr>
+        <tr>
+            <td>The Object is hidden at : </td><td th:text="${item.hidePlace}"></td>
+        </tr>
+        <tr>
+            <td>The Object ID generated is : </td><td th:text="${item.id}"></td>
+        </tr>
+
+    </table>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <form action="#" th:action="@{/modifyNew}" th:object="${object}" method="post">
+        <input type="hidden" th:value="${item.id}" name="id"/>
+        <a id = "goBack" th:href="@{viewAll}" class="mainbutton1">Go back to Object List !</a>
+        <button type="submit" id="goBack2" class="mainbutton">Make Changes !</button>
+    </form>
+</div>
+
+
+<div class="last">
+    <center><span style="font-size:80%; color:#2E151B; font-family:Comic Sans MS; margin-top:10px;">Copyright &copy; <script>document.write(new Date().getFullYear());</script>, Coding Journey</span></center>
+    <span style="float:right; margin-right:8px; margin-top:-8px; font-size:120%; text-decoration:none; color:#2E151B; font-family:Comic Sans MS;">Made by : Prashant</span>
+</div>
+</body>
+</html>
