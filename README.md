@@ -15,15 +15,5 @@ Persistent storage using Spring Data JPA
 
 🛠️ Tech Stack
 
-Backend
-  Java 8+
-  Spring Boot
-  Spring Web
-  Spring Data JPA
-  MySQL/MongoDB (configurable)
-
-Frontend
-  HTML
-  CSS
-  Javascript
-  Bootstrap
+Backend: Java 8+, Spring Boot, Spring Web, Spring Data JPA, MySQL/MongoDB (configurable)
+Frontend: HTML, CSS, Javascript, Bootstrap
